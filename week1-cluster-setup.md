@@ -52,6 +52,26 @@ Establish a 3-node Kubernetes control plane using **K3s** on Ubuntu 24.04 in a P
 | sor-k3s-worker1   | Ready  | <none>                  | 21s   | v1.32.3+k3s1 | ###.###.###.170   | <none>      | Ubuntu 24.04.2 LTS | 6.8.0-58-generic    | containerd://2.0.4-k3s2 |
 | sor-k3s-worker2   | Ready  | <none>                  | 11m   | v1.32.3+k3s1 | ###.###.###.220   | <none>      | Ubuntu 24.04.2 LTS | 6.8.0-58-generic    | containerd://2.0.4-k3s2 |
 
+---
+
+## 🗺️ Pod Placement Summary
+
+| Pod Name                        | Scheduled Node   |
+|----------------------------------|------------------|
+| CoreDNS                         | sor-k3s-master    |
+| Metrics Server                  | sor-k3s-master    |
+| Local Path Provisioner          | sor-k3s-master    |
+| Traefik Ingress Controller      | sor-k3s-master    |
+| Service Load Balancer (worker1)  | sor-k3s-worker1   |
+| Service Load Balancer (worker2)  | sor-k3s-worker2   |
+| Service Load Balancer (master)   | sor-k3s-master    |
+
+K3s automatically schedules system components primarily on the control-plane node unless customized.
+
+K3s also deploys a `svclb-traefik` LoadBalancer pod on each node to route traffic consistently across the cluster.
+
+---
+
 ## 🔑 Key Milestones
 
 - ✅ Proxmox hosts installed and operational
