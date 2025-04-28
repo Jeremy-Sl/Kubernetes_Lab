@@ -37,3 +37,16 @@ Establish a 3-node Kubernetes control plane using **K3s** on Ubuntu 24.04 in a P
   ```bash
   ssh jeremy@192.168.70.220
 
+  ## 🖥️ Clustering
+
+  -Joined node2 and node3 to node1 (master) with
+  curl -sfL https://get.k3s.io | K3S_URL=https://<MASTER_IP>:6443 K3S_TOKEN=<NODE_TOKEN> sh -
+
+  -confirmed cluster status with
+  sudo kubectl get nodes -o wide
+
+NAME              STATUS   ROLES                  AGE   VERSION        INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+sor-k3s-master    Ready    control-plane,master   42m   v1.32.3+k3s1   ###.###.###.120   <none>        Ubuntu 24.04.2 LTS   6.8.0-58-generic   containerd://2.0.4-k3s2
+sor-k3s-worker1   Ready    <none>                 21s   v1.32.3+k3s1   ###.###.###.170   <none>        Ubuntu 24.04.2 LTS   6.8.0-58-generic   containerd://2.0.4-k3s2
+sor-k3s-worker2   Ready    <none>                 11m   v1.32.3+k3s1   ###.###.###.220   <none>        Ubuntu 24.04.2 LTS   6.8.0-58-generic   containerd://2.0.4-k3s2
+
