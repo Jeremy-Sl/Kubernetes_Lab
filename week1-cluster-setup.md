@@ -52,4 +52,30 @@ Establish a 3-node Kubernetes control plane using **K3s** on Ubuntu 24.04 in a P
 | sor-k3s-worker1   | Ready  | <none>                  | 21s   | v1.32.3+k3s1 | ###.###.###.170   | <none>      | Ubuntu 24.04.2 LTS | 6.8.0-58-generic    | containerd://2.0.4-k3s2 |
 | sor-k3s-worker2   | Ready  | <none>                  | 11m   | v1.32.3+k3s1 | ###.###.###.220   | <none>      | Ubuntu 24.04.2 LTS | 6.8.0-58-generic    | containerd://2.0.4-k3s2 |
 
+## 🔑 Key Milestones
 
+- ✅ Proxmox hosts installed and operational
+- ✅ Ubuntu VMs spun up with static IPs
+- ✅ K3s server installed on master node
+- ✅ K3s agents installed on worker nodes
+- ✅ Full cluster visible via `kubectl`
+- ✅ SSH access confirmed on all nodes
+
+---
+
+## 🧠 Lessons Learned
+
+- Always validate `node-token` during K3s worker join
+- Ensure no conflicting services (like another K3s server) exist on workers
+- Fix kubeconfig permissions early to avoid sudo frustration
+- Troubleshoot agent joins by checking `journalctl -xeu k3s-agent`
+
+---
+
+## 📅 Transition to Week 2
+
+Next steps:
+- Deploy test workloads
+- Configure Ingress Controller
+- Explore Helm deployments
+- Set up internal DNS and TLS
