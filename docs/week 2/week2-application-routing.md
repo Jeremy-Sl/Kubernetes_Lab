@@ -23,8 +23,8 @@ Expose the application externally using the Traefik Ingress Controller pre-insta
 
 ## 📋 Tasks Completed
 
-- [ ] Create nginx Deployment
-- [ ] Create ClusterIP Service
+- [x] Create nginx Deployment
+- [x] Create ClusterIP Service
 - [ ] Create Ingress Resource
 - [ ] Verify External Access
 - [ ] Document Configurations and Outputs
