@@ -25,9 +25,9 @@ Expose the application externally using the Traefik Ingress Controller pre-insta
 
 - [x] Create nginx Deployment
 - [x] Create ClusterIP Service
-- [ ] Create Ingress Resource
-- [ ] Verify External Access
-- [ ] Document Configurations and Outputs
+- [x] Create Ingress Resource
+- [x] Verify External Access
+- [x] Document Configurations and Outputs
 
 ---
 
@@ -35,7 +35,6 @@ Expose the application externally using the Traefik Ingress Controller pre-insta
 
 - kubectl
 - Traefik (already installed with K3s)
-- (Optional) Helm (for future deployments)
 
 ---
 
@@ -53,5 +52,13 @@ Expose the application externally using the Traefik Ingress Controller pre-insta
 ## 📂 Deployment Manifests
 
 **nginx-deployment.yaml**
-```yaml
-# Placeholder - To be added
+Wrote and applied the YAML file to deploy two nginx pods in the cluster using a Deployment resource.  
+*(file in /manifests)*
+
+**nginx-service.yaml**
+Wrote and applied the YAML file to create a ClusterIP Service that provides internal access and load balances traffic across the nginx pods.  
+*(file in /manifests)*
+
+**nginx-ingress.yaml**
+Wrote and applied the YAML file to define an Ingress rule that exposes the nginx Service externally through the Traefik Ingress Controller.  
+*(file in /manifests)*
