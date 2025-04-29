@@ -42,10 +42,10 @@ Expose the application externally using the Traefik Ingress Controller pre-insta
 
 | Screenshot/File Name | Description |
 |----------------------|-------------|
-| `kubectl-get-deployments.png` | (Placeholder) |
-| `kubectl-get-services.png`    | (Placeholder) |
-| `kubectl-get-ingress.png`     | (Placeholder) |
-| `browser-nginx.png`           | (Placeholder) |
+| `kubectl-get-deployments.png` | verification of deployment |
+| `kubectl-get-services.png`    | verification of service running |
+| `kubectl-get-ingress.png`     | verification of ingress configuration |
+| `browser-nginx.png`           | confirmation of access to application |
 
 ---
 
