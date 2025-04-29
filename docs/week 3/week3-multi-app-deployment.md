@@ -75,6 +75,21 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 
 ## 📂 Deployment Manifests
 
-**nginx-deployment.yaml**
-```yaml
-# (Already created - referenced from Week 2)
+**whoami-deployment.yaml**
+
+**whoami-service.yaml**
+
+**whoami-ingress.yaml**
+
+**dashboard.yaml**
+
+## 📚 Learnings and Key Concepts
+
+(Placeholder — Summarize what you learn about deploying multiple apps, Services, Ingress, and scaling.)
+
+## 📈 Next Steps
+1. Deploy a full multi-container app (e.g., WordPress + MariaDB)
+
+2. Implement basic security practices: limit Ingress access, secure services.
+
+3. Introduce TLS with Traefik (Let's Encrypt certificate management).
