@@ -37,11 +37,10 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 
 ## 📋 Tasks Completed
 
-- [ ] Create `whoami` Deployment
-- [ ] Create `whoami` Service
-- [ ] Create `whoami` Ingress
-- [ ] Access nginx via browser (`nginx.lab.local`)
-- [ ] Access whoami via browser (`whoami.lab.local`)
+- [x] Create `whoami` Deployment
+- [x] Create `whoami` Service
+- [x] Create `whoami` Ingress
+- [x] Access whoami via browser (`whoami.lab.local`)
 - [ ] Scale nginx Deployment
 - [ ] Scale whoami Deployment
 - [ ] (Optional) Deploy Kubernetes Dashboard
@@ -63,11 +62,10 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 
 | Screenshot/File Name            | Description                       |
 |----------------------------------|-----------------------------------|
-| `kubectl-get-pods-week3.png`     | Both nginx and whoami Pods running |
-| `kubectl-get-svc-week3.png`      | Services for nginx and whoami created |
-| `kubectl-get-ingress-week3.png`  | Ingress rules for both apps applied |
-| `browser-nginx-lab-local.png`    | Accessing nginx via browser |
-| `browser-whoami-lab-local.png`   | Accessing whoami via browser |
+| `kubectl get pods - whoami.png`     | Both nginx and whoami Pods running |
+| `kubectl get service - whoami.png`      | Services for nginx and whoami created |
+| `kubectl get ingress - whoami.png`  | Ingress rules for both apps applied |
+| `whoami online.png`   | Accessing whoami via browser |
 | (Optional) `kubectl-get-deployments-scaled.png` | Verification of scaling replicas |
 | (Optional) `dashboard-access.png` | Kubernetes Dashboard GUI |
 
