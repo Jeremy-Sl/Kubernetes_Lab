@@ -74,10 +74,16 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 ## 📂 Deployment Manifests
 
 **whoami-deployment.yaml**
+Wrote and applied the YAML file to deploy one whoami pod in the cluster using a Deployment resource.  
+*(file in /manifests)*
 
 **whoami-service.yaml**
+Wrote and applied the YAML file to create a ClusterIP Service that provides internal access.
+*(file in /manifests)*
 
 **whoami-ingress.yaml**
+Wrote and applied the YAML file to define an Ingress rule that exposes the whoami Service externally through the Traefik Ingress Controller.  
+*(file in /manifests)*
 
 **dashboard.yaml**
 
