@@ -41,8 +41,8 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 - [x] Create `whoami` Service
 - [x] Create `whoami` Ingress
 - [x] Access whoami via browser (`whoami.lab.local`)
-- [ ] Scale nginx Deployment
-- [ ] Scale whoami Deployment
+- [x] Scale nginx Deployment
+- [x] Scale whoami Deployment
 - [ ] (Optional) Deploy Kubernetes Dashboard
 - [ ] Document outputs and screenshots
 
@@ -66,7 +66,8 @@ Deploy multiple applications on the Kubernetes cluster, expose them externally u
 | `kubectl get service - whoami.png`      | Services for nginx and whoami created |
 | `kubectl get ingress - whoami.png`  | Ingress rules for both apps applied |
 | `whoami online.png`   | Accessing whoami via browser |
-| (Optional) `kubectl-get-deployments-scaled.png` | Verification of scaling replicas |
+|  `kubectl scale deployments nginx.png` | Verification of scaling nginx |
+|  `kubectl scale deployments whoami.png` | Verification of scaling whoami |
 | (Optional) `dashboard-access.png` | Kubernetes Dashboard GUI |
 
 ---
